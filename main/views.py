@@ -33,14 +33,14 @@ def contact(request,):
         from_email = settings.EMAIL_HOST_USER
         connection = mail.get_connection()
         connection.open()
-        email_message = mail.EmailMessage(f'email is from {fname}', f'user email : {femail}\nuserPhoneNumber : {fsubject}\n\n\n query : {fmessage}'
+        email_message = mail.EmailMessage(f'email is from {fname}', f'user email : {femail}\nMatter: {fsubject}\n\n\n query : {fmessage}'
                                           ,from_email, ['aliwangara63@gmail.com', 'wangaraali56@gmail.com'], connection=connection)
 
         email_client= mail.EmailMessage('Aliwangara response','Thanks for reaching me\n\n+254700331844\naliwangara63@gmail.com'
                                           ,from_email, [femail], connection=connection)
 
 
-        connection.send_messages([email_message])
+        connection.send_messages([email_message, email_client])
         connection.close()
 
         messages.success(request, "Thanks for contacting. I will get back to you soon!")
