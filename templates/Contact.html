@@ -20,6 +20,8 @@
             </div>
         </div>
     </section>
+
+
     <!--================ End Banner Area =================-->
 
 
@@ -28,20 +30,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
-
-                 {% for message in messages %}
+                    <div class="contact_info">
+                        {% for message in messages %}
                                 <div class="alert alert-{{ message.tags }} dismissible fade show" role="alert">
                                     <strong>{{ message }}</strong>
                                     <button type="button" class="btn-close" data-bs-dismiss="alert"
                                             aria-label="Close"></button>
                                 </div>
-                 {% endfor %}
-                    <div class="contact_info">
+                        {% endfor %}
                         <div class="info_item">
                             <i class="lnr lnr-home"></i>
-
-
-
                             <h6 class="mb-4">Nairobi, Kenya</h6>
 
                         </div>
@@ -63,21 +61,21 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="name" name="name"
-                                       placeholder="Enter your name" required>
+                                       placeholder="Enter your name" required="required">
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control" id="email" name="email"
-                                       placeholder="Enter email address" required>
+                                       placeholder="Enter email address" required="required">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" id="subject" name="subject"
-                                       placeholder="Enter Subject" required>
+                                       placeholder="Enter Subject" required="required">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <textarea class="form-control" name="message" id="message" rows="1"
-                                          placeholder="Enter Message" required></textarea>
+                                          placeholder="Enter Message" required="required"></textarea>
                             </div>
                         </div>
                         <div class="col-md-12 text-right">
